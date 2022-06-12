@@ -1,0 +1,13 @@
+extends layout 
+
+block content 
+    h1.text-center.mt-4.mb-4= title
+    form(method="POST", action="/login")
+        .mb-3
+            label.form-label(for='username') Foydalanuvchi ismingiz 
+            input#username.form-control(type='text' name='username')
+        .mb-3
+            label.form-label(for='password') Parolingiz
+            input#password.form-control(type='password' name="password")
+        .mb-3 
+            button.btn.btn-primary(type='submit') Kirish

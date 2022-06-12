@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1.text-center.mt-4.mb-4= title
+  p DataBazamiz
+  each music, i in musics 
+      a.list-group-item.mb-4(href="/music/"+ music._id )= music.name 
+
+

@@ -1,0 +1,19 @@
+extends layout 
+
+block content 
+    h1.text-center.mt-4.mb-4= title
+    form(method="POST", action="/music/add")
+        .mb-3
+            label.form-label(for='name') Musiqa nomi
+            input#name.form-control(type='text' name='name')
+        .mb-3
+            label.form-label(for='singer') Musiqa Ijrochisi
+            input#singer.form-control(type='text' name="singer")
+
+        label.form-label(for='author')
+        input#author.form-control(type='hidden' name="author")
+        .mb-3
+            label.form-label(for='comments') Izoh
+            input#comments.form-control(type='text' name="comments")
+        .mb-3 
+            button.btn.btn-primary(type='submit') Junatish 

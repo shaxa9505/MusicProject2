@@ -1,0 +1,17 @@
+extends layout 
+
+block content 
+    h3.mt-5 admin: 
+        b  #{admin}
+    hr
+    h3.mt-5 Qushiq nomi: 
+        b  #{data.name}
+    hr
+    h3 Ijrochi: 
+        b #{data.singer}
+    hr
+    h3.mb-4 Izoh: 
+        b #{data.comments}
+    if user.id === data.author
+        a.btn.btn-warning.me-4.mb-4(href="/music/edit/" +data._id) O'zgartirish
+        a.btn.btn-danger.mb-4(href="/music/delete/" +data._id) O'chirish

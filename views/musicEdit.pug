@@ -1,0 +1,16 @@
+extends layout 
+
+block content 
+    h1.text-center.mt-4.mb-4= title
+    form(method="POST", action="/music/edit/" + data._id)
+        .mb-3
+            label.form-label(for='name') Musiqa nomi
+            input#name.form-control(type='text' name='name' value=data.name)
+        .mb-3
+            label.form-label(for='singer') Musiqa Ijrochisi
+            input#singer.form-control(type='text' name="singer" value=data.singer)
+        .mb-3
+            label.form-label(for='comments') Izoh
+            input#comments.form-control(type='text' name="comments" value=data.comments)
+        .mb-3 
+            button.btn.btn-warning(type='submit') O'zgartirish  
